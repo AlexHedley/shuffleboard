@@ -1,0 +1,22 @@
+{
+    "games": [
+        {
+            "id": 1,
+            "name": "",
+            "date": "2021-01-01",
+            "description": "",
+            "players": [
+                {
+                    "name": "",
+                    "score": ,
+                    "winner": true
+                },
+                {
+                    "name": "",
+                    "score": ,
+                    "winner": false
+                }
+            ]
+        }
+    ]
+}
