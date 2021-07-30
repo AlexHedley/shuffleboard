@@ -91,6 +91,7 @@
                         <div class="card" style="width: 18rem;">
                             <div class="card-body">
                                 <h5 class="card-title">{{game.name}}</h5>
+                                <p class="card-text">{{game.game}}</p>
                                 <p class="card-text">{{game.description}}</p>
                                 <p class="card-text">{{game.date | date:'d MMM yyyy'}}</p>
                                 <div ng-repeat="player in game.players">
