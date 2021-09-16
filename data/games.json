@@ -220,13 +220,13 @@
                 {
                     "name": "Alex",
                     "score": 4,
-                    "winner": true,
+                    "winner": false,
                     "colour": "blue"
                 },
                 {
                     "name": "Philip",
                     "score": 15,
-                    "winner": false,
+                    "winner": true,
                     "colour": "red"
                 }
             ]

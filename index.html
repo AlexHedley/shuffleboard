@@ -95,7 +95,11 @@
                                 <p class="card-text">{{game.description}}</p>
                                 <p class="card-text">{{game.date | date:'d MMM yyyy'}}</p>
                                 <div ng-repeat="player in game.players">
-                                    <p><span style="color: {{player.colour}};">{{player.name}}</span> <span ng-if="player.winner"><strong>Winner</strong></span></p>
+                                    <p>
+                                        <span style="color: {{player.colour}};">{{player.name}}</span>
+                                        <span class="badge badge-secondary">{{player.score}}</span>
+                                        <span ng-if="player.winner"><strong>Winner</strong></span>
+                                    </p>
                                 </div>
                             </div>
                         </div>
