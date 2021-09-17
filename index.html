@@ -82,6 +82,18 @@
                     </div>
                 </div>
 
+                <div class="row" style="margin-bottom: 30px;">
+                    <div class="col">
+
+                        <div id="output" class="text-center">
+                            🔴 {{red}} ({{formatNumber(red/colourSummary.length*100)}}) vs 🔵 {{blue}} ({{formatNumber(blue/colourSummary.length*100)}}) ({{colourSummary.length}})
+                        </div>
+
+                    </div>
+                </div>
+
+                
+
                 <div class="row">
                     <div 
                         ng-repeat="game in games | filter:searchText"

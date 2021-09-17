@@ -2,6 +2,7 @@ var myApp = angular.module('myApp', []);
 myApp.controller('myController', function ($scope, $http, $q, $filter) {
 
     $scope.games = [];
+    $scope.colourSummary = [];
 
     $scope.init = function () {
         getData();
@@ -20,6 +21,14 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
     $scope.generatePivot = () => {
         
         $scope.data = $scope.games.map(game => game.players.filter(player => player.winner === true));
+        
+        $scope.colourSummary = $scope.games
+            .flatMap(game => game.players.filter(player => player.winner === true))
+            .map(winner => winner.colour)
+            ;
+        $scope.red = $scope.colourSummary.filter(e => e === 'red').length
+        $scope.blue = $scope.colourSummary.filter(e => e === 'blue').length
+
         var data = [].concat.apply([], $scope.data);
 
         if ($scope.ui) {
@@ -40,6 +49,10 @@ myApp.controller('myController', function ($scope, $http, $q, $filter) {
             );
         }
 
+    }
+
+    $scope.formatNumber = function(i) {
+        return Math.round(i * 100)/100; 
     }
 
     $scope.init();
